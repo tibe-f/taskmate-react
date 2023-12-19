@@ -1,42 +1,159 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.App{
+    margin: auto;
+    padding: 10px 10px;
+}
+section{
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 70px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+header .logo{
+    display: flex;
+    align-items: center;
+}
+header .logo img{
+    max-width: 40px;
+    cursor: pointer;
+}
+header .logo span{
+    font-size: 22px;
+    margin-left: 7px;
+    cursor: pointer;
+    color: #525252;
+}
+.teamSelector{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+header .teamSelector span{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    display: inline-block;
+    border: 1px solid #dfdfdf;
+}
+header .teamSelector span.active{
+    width: 35px;
+    height: 35px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
+.teamSelector span.light{
+    background-color: #FFFFFF;
+    transition: all 500ms;  
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  
+.teamSelector span.lightdark{
+    background-color: #837e7e;
+    transition: all 500ms;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  
+.teamSelector span.dark{
+    background-color: #15202B;
+    transition: all 500ms;
+ }
+.teamSelector span.dark{
+    background-color: #15202B;
+    transition: all 500ms;
+}
+.teamSelector span.gOne{
+    background: linear-gradient(90deg, hsla(191,75%, 60%, 1) 0%, rgb(1, 45, 54) 100%)
+}
+.teamSelector span.gTwo{
+    background: linear-gradient(90deg, rgb(176, 230, 76) 0%, rgb(38, 54, 1) 100%)
+}
+.teamSelector span.gThree{
+    background: linear-gradient(90deg, rgb(230, 132, 76) 0%, rgb(54, 12, 1) 100%)
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addTask{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 70px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+.addTask form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.addTask form input{
+   padding: 0.5rem; 
+   border-radius: 7px;
+   margin-right: 7px;
+   font-size: large;
+   border: 2px solid rgba(0, 0, 0, 0.2);
+   width: 80%;
+}
+.addTask form input:active,.addTask form input:focus{
+    outline: none;
+}
+.addTask form button{
+   padding: 0.5rem 1rem; 
+   border-radius: 7px;
+   font-size: large;
+   border: none;
+   background-color: rgb(53, 194, 63);
+   color: white;
+   cursor: pointer;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.showTask .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0.5rem;
+
 }
 
-.card {
-  padding: 2em;
+.showTask .head button{
+    border: none;
+    background-color: #1648b6;
+    padding: 0.5rem 1rem; 
+    border-radius: 7px;
+    font-size: large;
+    border: none;
+    color: white;
+    cursor: pointer;
+
 }
 
-.read-the-docs {
-  color: #888;
+.showTask ul{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.showTask li{
+    padding: 15px 10px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    gap: 10px;
+    width: 350px;
+    box-shadow: var(--box-shadow);
+    border-radius: 7px;
+    border-left: 7px solid #1648b6;
 }
