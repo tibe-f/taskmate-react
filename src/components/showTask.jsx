@@ -1,6 +1,11 @@
 import React from 'react'
 
 export const ShowTask = () => {
+
+  const tasks=[
+    {id: 1000, name:'Task B', time:'2:09:01 Am 9/14/2030'},
+    {id: 1004, name:'Task A', time:'2:09:01 Am 9/14/2030'},
+    {id: 1020, name:'Task C', time:'2:09:01 Am 9/14/2030'}]
   return (
     <section className="showTask">
       <div className="head">
@@ -11,46 +16,17 @@ export const ShowTask = () => {
         <button className="clearAll">clear</button>
       </div>
       <ul>
-        <li>
+        { tasks.map( task => (
+          <li key={task.id}>
           <p>
-            <span className='name'>Task A</span>
-            <span className='time'>2:09:01 Am 9/14/2030</span>
+            <span className='name'>{task.name}</span>
+            <span className='time'>{task.time}</span>
           </p>
           <i className='bi bi-pencil-square'></i>
           <i className="bi bi-trash"></i>
         </li>
-        <li>
-          <p>
-            <span className='name'>Task A</span>
-            <span className='time'>2:09:01 Am 9/14/2030</span>
-          </p>
-          <i className='bi bi-pencil-square'></i>
-          <i className="bi bi-trash"></i>
-        </li>
-        <li>
-          <p>
-            <span className='name'>Task A</span>
-            <span className='time'>2:09:01 Am 9/14/2030</span>
-          </p>
-          <i className='bi bi-pencil-square'></i>
-          <i className="bi bi-trash"></i>
-        </li>
-        <li>
-          <p>
-            <span className='name'>Task A</span>
-            <span className='time'>2:09:01 Am 9/14/2030</span>
-          </p>
-          <i className='bi bi-pencil-square'></i>
-          <i className="bi bi-trash"></i>
-        </li>
-        <li>
-          <p>
-            <span className='name'>Task A</span>
-            <span className='time'>2:09:01 Am 9/14/2030</span>
-          </p>
-          <i className='bi bi-pencil-square'></i>
-          <i className="bi bi-trash"></i>
-        </li>
+        ))}
+        
       </ul>
     </section>
   )

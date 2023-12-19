@@ -122,11 +122,11 @@ header .teamSelector span.active{
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #e5e5e5;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
 
 }
 
-.showTask .head button{
+.showTask .head .clearAll{
     border: none;
     background-color: #1648b6;
     padding: 0.5rem 1rem; 
@@ -136,6 +136,17 @@ header .teamSelector span.active{
     color: white;
     cursor: pointer;
 
+}
+.showTask p.head span:first-child{
+    flex-grow: 2;
+}
+.showTask .count{
+    background-color: #dfdfdf;
+    color: #525252;
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+    user-select: none;
 }
 
 .showTask ul{
@@ -156,4 +167,33 @@ header .teamSelector span.active{
     box-shadow: var(--box-shadow);
     border-radius: 7px;
     border-left: 7px solid #1648b6;
+}
+
+.showTask li:hover{
+    background-color: #f8f8f8;
+}
+
+.showTask li p{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.showTask li .name{
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+.showTask li .time{
+    font-size: 12px;
+    color: #737373;
+}
+.showTask i.bi-trash{
+    font-size: 18px;
+    color: #d82148;
+    cursor: pointer;
+}
+.showTask i.bi-pencil-square{
+    font-size: 18px;
+    color: #1363df;
+    cursor: pointer;
 }
