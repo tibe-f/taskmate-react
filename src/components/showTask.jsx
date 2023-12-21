@@ -1,22 +1,19 @@
 import React from 'react'
 
-export const ShowTask = () => {
+export const ShowTask = ({taskList, setTaskList}) => {
 
-  const tasks=[
-    {id: 1000, name:'Task B', time:'2:09:01 Am 9/14/2030'},
-    {id: 1004, name:'Task A', time:'2:09:01 Am 9/14/2030'},
-    {id: 1020, name:'Task C', time:'2:09:01 Am 9/14/2030'}]
+ 
   return (
     <section className="showTask">
       <div className="head">
         <div>
           <span className='title'> Todo </span>
-          <span className='count'>0</span>
+          <span className='count'>{taskList.length}</span>
         </div>
-        <button className="clearAll">clear</button>
+        <button className="clearAll" onClick={()=> setTaskList([])}>clear</button>
       </div>
       <ul>
-        { tasks.map( task => (
+        { taskList.map( task => (
           <li key={task.id}>
           <p>
             <span className='name'>{task.name}</span>
