@@ -11,7 +11,7 @@ export const AddTask = ({taskList, setTaskList,task, setTask}) => {
       ))   
 
       setTaskList(updatedTaskList)
-      setTask({...task, name: ''})
+      setTask({})
 
     }else{
     const date= new Date()
@@ -23,15 +23,15 @@ export const AddTask = ({taskList, setTaskList,task, setTask}) => {
 
     setTaskList([...taskList, data])
 
-    setTask({...task, name: ''})
+    setTask({})
   
 }
 }
   return (
     <section className="addTask">
       <form onSubmit={handleSubmit}>
-        <input type="text" name='textField' value={task.name} autoComplete="off" placeholder=" add task" maxLength={25} onChange={(e) => setTask({...task, name : e.target.value})} required/>
-        <button type="submit">Add</button>
+        <input type="text" name='textField' value={task.name || ''} autoComplete="off" placeholder=" add task" maxLength={25} onChange={(e) => setTask({...task, name : e.target.value})} required/>
+        <button type="submit">{task.id ? 'update' : 'add'}</button>
       </form>
 
     </section>
